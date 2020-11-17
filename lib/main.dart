@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:masterclasss/Screens/home_screen.dart';
+
+import 'Screens/master.dart';
+import 'Screens/profile_screen.dart';
+import 'widgets/choice_screen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Masterclass',
       debugShowCheckedModeBanner: false,
-       theme:ThemeData(
-        primarySwatch: Colors.white,
-        scaffoldBackgroundColor: Colors.white,
-
+      theme: new ThemeData(
+        accentColor: Colors.black,
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.black,
       ),
-      home: HomeScreen(),
-    );
+      home: Choicescreen(),
+    ); //
   }
 }
