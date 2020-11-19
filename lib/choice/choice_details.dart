@@ -96,22 +96,42 @@ List<Preview> previews = [
   ),
   Preview(
     name: 'Robins Roberts',
-    field: 'Teaches effective and Authetic Communication',
+    field: 'Teaches effective ',
     image: 'images/pykh.jpg',
   ),
   Preview(
     name: 'Robins Roberts',
-    field: 'Teaches effective and Authetic Communication',
+    field: 'Teaches effective ',
     image: 'images/pykh.jpg',
   ),
   Preview(
     name: 'Robins Roberts',
-    field: 'Teaches effective and Authetic Communication',
+    field: 'Teaches effective ',
     image: 'images/pykh.jpg',
   ),
   Preview(
     name: 'Robins Roberts',
-    field: 'Teaches effective and Authetic Communication',
+    field: 'Teaches effective',
+    image: 'images/pykh.jpg',
+  ),
+  Preview(
+    name: 'Robins Roberts',
+    field: 'Teaches effective',
+    image: 'images/pykh.jpg',
+  ),
+  Preview(
+    name: 'Robins Roberts',
+    field: 'Teaches effective',
+    image: 'images/pykh.jpg',
+  ),
+  Preview(
+    name: 'Robins Roberts',
+    field: 'Teaches effective',
+    image: 'images/pykh.jpg',
+  ),
+  Preview(
+    name: 'Robins Roberts',
+    field: 'Teaches effective',
     image: 'images/pykh.jpg',
   ),
   // Choice(

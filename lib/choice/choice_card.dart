@@ -56,78 +56,6 @@ class ChoiceCard extends StatelessWidget {
             ],
           ),
         ),
-        // Padding(
-        //   padding: const EdgeInsets.all(8.0),
-        //   child: Container(
-        //     child: Text(
-        //       choiced.name,
-        //       style: TextStyle(
-        //           color: Colors.white,
-        //           fontSize: 15,
-        //           fontWeight: FontWeight.bold),
-        //     ),
-        //   ),
-        // ),
-        // Padding(
-        //   padding: const EdgeInsets.all(8.0),
-        //   child: Container(
-        //     child: Text(
-        //       choiced.field,
-        //       textAlign: TextAlign.end,
-        //       overflow: TextOverflow.ellipsis,
-        //       // overflow: TextOverflow.clip,
-        //       maxLines: null,
-        //       style: const TextStyle(
-        //         fontSize: 13.0,
-        //       ),
-        //     ),
-        //   ),
-        // ),
-
-        // ),
-        // child:Text(choiced.name,),
-        // Divider(),
-
-        // Column(
-        //   children: <Widget>[
-
-        // new Expanded(
-        //     child: Container(
-        //   decoration: BoxDecoration(
-        //     borderRadius: BorderRadius.circular(12.0),
-        //   ),
-        //   // width: 150.0,
-        //   // height: 200,
-        //   child: Image.asset(choiced.image, fit: BoxFit.cover),
-        // )),
-
-        // SizedBox(width: 13.0),
-        // new Container(
-        //   width: 150.0,
-        //   // height: 260.0,
-        //   padding: const EdgeInsets.all(10.0),
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //     crossAxisAlignment: CrossAxisAlignment.start,
-        //     children: <Widget>[
-        //       Text(choiced.name),
-        //       // Divider(),
-        //       Text(
-        //         choiced.field,
-        //         textAlign: TextAlign.end,
-        //         overflow: TextOverflow.ellipsis,
-        //         // overflow: TextOverflow.clip,
-        //         maxLines: null,
-        //         style: const TextStyle(
-        //           fontSize: 10.0,
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // )
-        // ],
-        // crossAxisAlignment: CrossAxisAlignment.start,
-        // ),
       ],
     );
   }
@@ -188,78 +116,6 @@ class PreviewCard extends StatelessWidget {
             ],
           ),
         ),
-        // Padding(
-        //   padding: const EdgeInsets.all(8.0),
-        //   child: Container(
-        //     child: Text(
-        //       choiced.name,
-        //       style: TextStyle(
-        //           color: Colors.white,
-        //           fontSize: 15,
-        //           fontWeight: FontWeight.bold),
-        //     ),
-        //   ),
-        // ),
-        // Padding(
-        //   padding: const EdgeInsets.all(8.0),
-        //   child: Container(
-        //     child: Text(
-        //       choiced.field,
-        //       textAlign: TextAlign.end,
-        //       overflow: TextOverflow.ellipsis,
-        //       // overflow: TextOverflow.clip,
-        //       maxLines: null,
-        //       style: const TextStyle(
-        //         fontSize: 13.0,
-        //       ),
-        //     ),
-        //   ),
-        // ),
-
-        // ),
-        // child:Text(choiced.name,),
-        // Divider(),
-
-        // Column(
-        //   children: <Widget>[
-
-        // new Expanded(
-        //     child: Container(
-        //   decoration: BoxDecoration(
-        //     borderRadius: BorderRadius.circular(12.0),
-        //   ),
-        //   // width: 150.0,
-        //   // height: 200,
-        //   child: Image.asset(choiced.image, fit: BoxFit.cover),
-        // )),
-
-        // SizedBox(width: 13.0),
-        // new Container(
-        //   width: 150.0,
-        //   // height: 260.0,
-        //   padding: const EdgeInsets.all(10.0),
-        //   child: Column(
-        //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //     crossAxisAlignment: CrossAxisAlignment.start,
-        //     children: <Widget>[
-        //       Text(choiced.name),
-        //       // Divider(),
-        //       Text(
-        //         choiced.field,
-        //         textAlign: TextAlign.end,
-        //         overflow: TextOverflow.ellipsis,
-        //         // overflow: TextOverflow.clip,
-        //         maxLines: null,
-        //         style: const TextStyle(
-        //           fontSize: 10.0,
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // )
-        // ],
-        // crossAxisAlignment: CrossAxisAlignment.start,
-        // ),
       ],
     );
   }
@@ -319,20 +175,23 @@ class Populartile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: SizedBox(
-          height: 100,
-          width: 50,
-          child: Image.asset(
-            previewed.image,
-            fit: BoxFit.cover,
-          )),
-      title: Text(
-        previewed.name,
-        style: TextStyle(
-            color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+    return InkWell(
+      child: ListTile(
+        leading: SizedBox(
+            height: 100,
+            width: 50,
+            child: Image.asset(
+              previewed.image,
+              fit: BoxFit.cover,
+            )),
+        title: Text(
+          previewed.name,
+          style: TextStyle(
+              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
+        ),
+        subtitle: Text(previewed.field),
       ),
-      subtitle: Text(previewed.field),
+      onTap: () {},
     );
   }
 }

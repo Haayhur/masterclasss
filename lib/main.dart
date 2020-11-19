@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'Screens/master.dart';
+import 'Screens/controller.dart';
+
 import 'Screens/profile_screen.dart';
+import 'Screens/search_screen.dart';
 import 'widgets/choice_screen.dart';
 
 void main() => runApp(MyApp());
@@ -16,7 +18,13 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: Choicescreen(),
-    ); //
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Controller(),
+        '/home': (context) => Choicescreen(),
+        '/search': (context) => SearchScreen(),
+        '/profile': (context) => ProfileScreen(),
+      },
+    );
   }
 }
