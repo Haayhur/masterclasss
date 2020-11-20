@@ -8,158 +8,126 @@ class GroupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          body: CustomScrollView(
+          body: Padding(
+            padding: const EdgeInsets.only(top:20.0),
+            child: CustomScrollView(
         slivers: [
-          SliverAppBar(backgroundColor: Colors.black),
-          SliverToBoxAdapter(
-              child: ListTile(
-            title: Text('Arts & Entertainment',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Text('27 Classes'),
-          )),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                final Preview pre = previews[index];
+            
+            _Listname(title: 'Arts & Entertainment', subtitle: '27 Classes'),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  final Preview pre = previews[index];
 
-                return Populartile(
-                  previewed: pre,
-                );
-              },
-              childCount: previews.length,
+                  return Populartile(
+                    previewed: pre,
+                  );
+                },
+                childCount: previews.length,
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-              child: ListTile(
-            title: Text('Home & Lifestyle',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Text('8 Classes'),
-          )),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                final Preview pre = previews[index];
+            _Listname(title: 'Home & Lifestyle', subtitle: '8 Classes'),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  final Preview pre = previews[index];
 
-                return Populartile(
-                  previewed: pre,
-                );
-              },
-              childCount: previews.length,
+                  return Populartile(
+                    previewed: pre,
+                  );
+                },
+                childCount: previews.length,
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-              child: ListTile(
-            title: Text('Music',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Text('11 Classes'),
-          )),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                final Preview pre = previews[index];
+            _Listname(title: 'Music', subtitle: '11 Classes'),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  final Preview pre = previews[index];
 
-                return Populartile(
-                  previewed: pre,
-                );
-              },
-              childCount: previews.length,
+                  return Populartile(
+                    previewed: pre,
+                  );
+                },
+                childCount: previews.length,
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-              child: ListTile(
-            title: Text('Food',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Text('8 Classes'),
-          )),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                final Preview pre = previews[index];
+            _Listname(title: 'Food', subtitle: '8 Classes'),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  final Preview pre = previews[index];
 
-                return Populartile(
-                  previewed: pre,
-                );
-              },
-              childCount: previews.length,
+                  return Populartile(
+                    previewed: pre,
+                  );
+                },
+                childCount: previews.length,
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-              child: ListTile(
-            title: Text('Sports & Gaming',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Text('9 Classes'),
-          )),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                final Preview pre = previews[index];
+            _Listname(title: 'Sports & Gaming', subtitle: '9 Classes'),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  final Preview pre = previews[index];
 
-                return Populartile(
-                  previewed: pre,
-                );
-              },
-              childCount: previews.length,
+                  return Populartile(
+                    previewed: pre,
+                  );
+                },
+                childCount: previews.length,
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-              child: ListTile(
-            title: Text('Writing',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Text('7 Classes'),
-          )),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                final Preview pre = previews[index];
+            _Listname(title: 'Writing', subtitle: '7 Classes'),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  final Preview pre = previews[index];
 
-                return Populartile(
-                  previewed: pre,
-                );
-              },
-              childCount: previews.length,
+                  return Populartile(
+                    previewed: pre,
+                  );
+                },
+                childCount: previews.length,
+              ),
             ),
-          ),
-          SliverToBoxAdapter(
-              child: ListTile(
-            title: Text('Design & Style',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Text('6 Classes'),
-          )),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                final Preview pre = previews[index];
+            _Listname(title: 'Drama & Arts', subtitle: '12 classes'),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) {
+                  final Preview pre = previews[index];
 
-                return Populartile(
-                  previewed: pre,
-                );
-              },
-              childCount: previews.length,
+                  return Populartile(
+                    previewed: pre,
+                  );
+                },
+                childCount: previews.length,
+              ),
             ),
-          ),
         ],
-      )),
+      ),
+          )),
     );
+  }
+}
+
+class _Listname extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  const _Listname({
+    Key key,
+    this.title,
+    this.subtitle,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverToBoxAdapter(
+        child: ListTile(
+      title: Text(title,
+          style: TextStyle(
+              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)),
+      subtitle: Text(subtitle),
+    ));
   }
 }

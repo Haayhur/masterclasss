@@ -36,18 +36,7 @@ class _ChoicescreenState extends State<Choicescreen> {
       ),
       body: ListView(
         children: [
-          Row(
-            children: [
-              Text(
-                'New Classes',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.start,
-              ),
-            ],
-          ),
+          _TitleClass(title: 'New Classes'),
           SizedBox(
             height: 10.0,
           ),
@@ -70,18 +59,8 @@ class _ChoicescreenState extends State<Choicescreen> {
           // SizedBox(
           //   height: 6.0,
           // ),
-          Row(
-            children: [
-              Text(
-                'Class Previews',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.start,
-              ),
-            ],
-          ),
+          _TitleClass(title: 'Class Previews'),
+
           SizedBox(
             height: 10.0,
           ),
@@ -100,27 +79,54 @@ class _ChoicescreenState extends State<Choicescreen> {
             ),
           ),
           SizedBox(),
-          Row(
-            children: [
-              Text(
-                'Popular Classes',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.start,
-              ),
-            ],
-          ),
+          _TitleClass(title: 'Popular Classes'),
 
           SizedBox(height: 10.0),
-          // Container(
-          //   height: 200.0,
-          //   width: 350.0,
-          //   child:
-          // ),
+          Column(
+            // 'I am still working on it, i want to convert it to CustomScrollview'
+            children: <Widget>[
+              Container(
+                height: 200.0,
+                width: 350.0,
+                child: ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: previews.length,
+                  // scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    final Preview pre = previews[index];
+                    return Populartile(
+                      previewed: pre,
+                    );
+                  },
+                ),
+              ),
+              // ),
+            ],
+          ),
         ],
       ),
+    );
+  }
+}
+
+class _TitleClass extends StatelessWidget {
+  final String title;
+  const _TitleClass({
+    Key key,
+    this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.start,
+        ),
+      ],
     );
   }
 }
@@ -153,3 +159,7 @@ class _ChoicescreenState extends State<Choicescreen> {
 //                   );
 //                 },
 //               ),
+
+// Container(
+//   height: 200.0,
+//   width: 350.0,

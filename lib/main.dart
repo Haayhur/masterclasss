@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'Screens/choice_screen.dart';
 import 'Screens/controller.dart';
-
 import 'Screens/profile_screen.dart';
 import 'Screens/search_screen.dart';
-import 'widgets/choice_screen.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:masterclasss/Screens/profile_screen.dart';
 import 'package:masterclasss/Screens/search_screen.dart';
-import 'package:masterclasss/widgets/choice_screen.dart';
 
+import 'choice_screen.dart';
 import 'group_screen.dart';
 
 class Controller extends StatefulWidget {
@@ -31,9 +31,6 @@ class _ControllerState extends State<Controller> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('BottomNavigationBar Sample'),
-      // ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

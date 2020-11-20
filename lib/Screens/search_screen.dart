@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masterclasss/choice/choice_details.dart';
 
 class SearchScreen extends StatefulWidget {
   @override
@@ -15,6 +16,7 @@ class _SearchScreenState extends State<SearchScreen> {
         leading: IconButton(
           icon: Icon(typing ? Icons.search : Icons.search),
           onPressed: () {
+            showSearch(context: context, delegate: DataSearch());
             setState(() {
               typing = !typing;
             });
@@ -41,5 +43,42 @@ class TextBox extends StatelessWidget {
             hintText: 'Try Films & TV'),
       ),
     );
+  }
+}
+
+class DataSearch extends SearchDelegate<String> {
+  @override
+  List<Widget> buildActions(BuildContext context) {
+    return [IconButton(icon: Icon(Icons.clear), onPressed: () {})];
+    // TODO: implement buildActions
+    // throw UnimplementedError();
+  }
+
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(
+        icon: AnimatedIcon(
+          icon: AnimatedIcons.menu_arrow,
+          progress: transitionAnimation,
+        ),
+        onPressed: () {});
+
+    // TODO: implement buildLeading
+    throw UnimplementedError();
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    // TODO: implement buildResults
+    throw UnimplementedError();
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final suggestionList = query.isEmpty ? choices : previews;
+    return ListView.builder(
+        itemBuilder: (context, index) => ListTile(
+            leading: Icon(Icons.book), title: Text(suggestionList[index])),
+        itemCount: suggestionList.length);
   }
 }
