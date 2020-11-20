@@ -7,19 +7,20 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  bool typing = true;
+  // bool typing = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: typing ? TextBox() : Text("Title"),
+        title: TextBox(),
+        //  : Text("Title"),
         leading: IconButton(
-          icon: Icon(typing ? Icons.search : Icons.search),
+          icon: Icon( Icons.search),
           onPressed: () {
-            showSearch(context: context, delegate: DataSearch());
-            setState(() {
-              typing = !typing;
-            });
+            // showSearch(context: context, delegate: DataSearch());
+            // setState(() {
+            //   typing = !typing;
+            // });
           },
         ),
       ),
@@ -46,39 +47,40 @@ class TextBox extends StatelessWidget {
   }
 }
 
-class DataSearch extends SearchDelegate<String> {
-  @override
-  List<Widget> buildActions(BuildContext context) {
-    return [IconButton(icon: Icon(Icons.clear), onPressed: () {})];
-    // TODO: implement buildActions
-    // throw UnimplementedError();
-  }
+// class DataSearch extends SearchDelegate<String> {
+//   @override
+//   List<Widget> buildActions(BuildContext context) {
+//     return [IconButton(icon: Icon(Icons.clear), onPressed: () {})];
+//     // TODO: implement buildActions
+//     // throw UnimplementedError();
+//   }
 
-  @override
-  Widget buildLeading(BuildContext context) {
-    return IconButton(
-        icon: AnimatedIcon(
-          icon: AnimatedIcons.menu_arrow,
-          progress: transitionAnimation,
-        ),
-        onPressed: () {});
+//   @override
+//   Widget buildLeading(BuildContext context) {
+//     return IconButton(
+//         icon: AnimatedIcon(
+//           icon: AnimatedIcons.menu_arrow,
+//           progress: transitionAnimation,
+//         ),
+//         onPressed: () {});
 
-    // TODO: implement buildLeading
-    throw UnimplementedError();
-  }
+//     // TODO: implement buildLeading
+//     throw UnimplementedError();
+//   }
 
-  @override
-  Widget buildResults(BuildContext context) {
-    // TODO: implement buildResults
-    throw UnimplementedError();
-  }
+//   @override
+//   Widget buildResults(BuildContext context) {
+//     // TODO: implement buildResults
+//     throw UnimplementedError();
+//   }
 
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    final suggestionList = query.isEmpty ? choices : previews;
-    return ListView.builder(
-        itemBuilder: (context, index) => ListTile(
-            leading: Icon(Icons.book), title: Text(suggestionList[index])),
-        itemCount: suggestionList.length);
-  }
-}
+//   // Since its more of backend, i will implement it later
+//   @override
+//   Widget buildSuggestions(BuildContext context) {
+//     final suggestionList = query.isEmpty ? choices : previews;
+//     return ListView.builder(
+//         itemBuilder: (context, index) => ListTile(
+//             leading: Icon(Icons.book), title: Text(suggestionList[index])),
+//         itemCount: suggestionList.length);
+//   }
+// }
