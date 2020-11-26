@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masterclasss/widgets/custom_buttons.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -41,14 +42,14 @@ class ProfileScreen extends StatelessWidget {
                   const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
               child: Column(
                 children: [
-                  Mainbotton(
+                  Mainbutton(
                     title: 'CONTINUE WITH GOOGLE',
                     containerColor: Colors.white,
                     textColor: Colors.black,
                     onTap: () {},
                   ),
                   SizedBox(height: 25.0),
-                  Mainbotton(
+                  Mainbutton(
                     title: 'CONTINUE WITH FACEBOOK',
                     containerColor: Colors.blue,
                     textColor: Colors.white,
@@ -65,7 +66,7 @@ class ProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 15.0),
-                  Mainbotton(
+                  Mainbutton(
                     title: 'CREATE AN ACCOUNT',
                     containerColor: Colors.pinkAccent,
                     textColor: Colors.white,
@@ -81,7 +82,9 @@ class ProfileScreen extends StatelessWidget {
                               fontSize: 13,
                               fontWeight: FontWeight.bold),
                         ),
-                        onTap: () {}),
+                        onTap: () {
+                          Navigator.of(context).pushReplacementNamed('/login');
+                        }),
                   ),
                 ],
               ),
@@ -109,53 +112,6 @@ class ProfileScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           )),
-    );
-  }
-}
-
-class Mainbotton extends StatelessWidget {
-  final String title, icon;
-  final Image imageurl;
-  final Color containerColor, textColor;
-  final Function onTap;
-
-  const Mainbotton(
-      {Key key,
-      this.title,
-      this.containerColor,
-      this.textColor,
-      this.imageurl,
-      this.icon,
-      this.onTap})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      // padding: EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        color: containerColor,
-        borderRadius: BorderRadius.circular(7),
-      ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  title,
-                  style:
-                      TextStyle(color: textColor, fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
     );
   }
 }

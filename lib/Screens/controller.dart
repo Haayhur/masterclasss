@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterclasss/Screens/profile_screen.dart';
 import 'package:masterclasss/Screens/search_screen.dart';
-
 import 'choice_screen.dart';
 import 'group_screen.dart';
 

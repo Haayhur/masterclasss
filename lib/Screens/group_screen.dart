@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:masterclasss/choice/choice_card.dart';
 import 'package:masterclasss/choice/choice_details.dart';
 import 'package:masterclasss/choice/choice_model.dart';
+import 'package:masterclasss/widgets/styles.dart';
 
 class GroupScreen extends StatelessWidget {
   @override
@@ -9,10 +10,9 @@ class GroupScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           body: Padding(
-            padding: const EdgeInsets.only(top:20.0),
-            child: CustomScrollView(
-        slivers: [
-            
+        padding: const EdgeInsets.only(top: 20.0),
+        child: CustomScrollView(
+          slivers: [
             _Listname(title: 'Arts & Entertainment', subtitle: '27 Classes'),
             SliverList(
               delegate: SliverChildBuilderDelegate(
@@ -104,9 +104,9 @@ class GroupScreen extends StatelessWidget {
                 childCount: previews.length,
               ),
             ),
-        ],
-      ),
-          )),
+          ],
+        ),
+      )),
     );
   }
 }
@@ -124,9 +124,10 @@ class _Listname extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
         child: ListTile(
-      title: Text(title,
-          style: TextStyle(
-              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)),
+      title: Text(title, style: kTitleStyle
+          //  TextStyle(
+          //     color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)
+          ),
       subtitle: Text(subtitle),
     ));
   }
