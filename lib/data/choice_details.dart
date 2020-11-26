@@ -1,4 +1,4 @@
-import 'package:masterclasss/choice/choice_model.dart';
+import 'choice_model.dart';
 
 List<Choice> choices = [
   Choice(

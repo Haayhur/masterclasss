@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:masterclasss/choice/choice_card.dart';
-import 'package:masterclasss/choice/choice_details.dart';
-import 'package:masterclasss/choice/choice_model.dart';
+import 'package:masterclasss/data/choice_details.dart';
+import 'package:masterclasss/data/choice_model.dart';
+import 'package:masterclasss/widgets/choice_card.dart';
 import 'package:masterclasss/widgets/styles.dart';
 
 class GroupScreen extends StatelessWidget {

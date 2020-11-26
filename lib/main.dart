@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splash',
       routes: {
         '/': (context) => Controller(),
-        '/home': (context) => Choicescreen(),
+        '/home': (context) => Homescreen(),
         '/search': (context) => SearchScreen(),
         '/profile': (context) => ProfileScreen(),
         '/splash': (context) => SplashPage(),

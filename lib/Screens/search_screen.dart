@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterclasss/choice/choice_details.dart';
+// import 'package:masterclasss/choice/choice_details.dart';
 
 class SearchScreen extends StatefulWidget {
   @override

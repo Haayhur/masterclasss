@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:masterclasss/choice/choice_card.dart';
-import 'package:masterclasss/choice/choice_details.dart';
-import 'package:masterclasss/choice/choice_model.dart';
+import 'package:masterclasss/data/choice_details.dart';
+import 'package:masterclasss/data/choice_model.dart';
+import 'package:masterclasss/main.dart';
 
-class Choicescreen extends StatefulWidget {
+import 'package:masterclasss/widgets/choice_card.dart';
+
+class Homescreen extends StatefulWidget {
   @override
-  _ChoicescreenState createState() => _ChoicescreenState();
+  _HomescreenState createState() => _HomescreenState();
 }
 
 // int length = 6;
 // final Size screenSize = MediaQuery.of(context).size;
 
-class _ChoicescreenState extends State<Choicescreen> {
+class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

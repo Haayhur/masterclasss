@@ -15,7 +15,7 @@ class _ControllerState extends State<Controller> {
   int _selectedIndex = 0;
 
   static List<Widget> _widgetOptions = <Widget>[
-    Choicescreen(),
+    Homescreen(),
     GroupScreen(),
     SearchScreen(),
     ProfileScreen(),
