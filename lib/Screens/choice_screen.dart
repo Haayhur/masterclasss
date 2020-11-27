@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterclasss/data/choice_details.dart';
 import 'package:masterclasss/data/choice_model.dart';
-import 'package:masterclasss/main.dart';
 
 import 'package:masterclasss/widgets/choice_card.dart';
 
@@ -36,7 +35,29 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ],
       ),
-      body: ListView(
+      body:
+          // CustomScrollView(
+          //   slivers: [
+          //     _TitleClass(title: 'New Classes'),
+          //     SliverList(
+          //       // gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          //       //   maxCrossAxisExtent: null,
+          //       // ),
+          //       delegate: SliverChildBuilderDelegate(
+          //         (BuildContext context, int index) {
+          //           final Choice cho = choices[index];
+          //           return ChoiceCard(
+          //             onTap: () {},
+          //             choiced: cho,
+          //           );
+          //         },
+          //         // scrollDirection: Axis.horizontal,
+          //         childCount: choices.length,
+          //       ),
+          //     ),
+          //   ],
+          // ),
+          ListView(
         children: [
           _TitleClass(title: 'New Classes'),
           SizedBox(
@@ -53,6 +74,7 @@ class _HomescreenState extends State<Homescreen> {
               itemBuilder: (context, index) {
                 final Choice cho = choices[index];
                 return ChoiceCard(
+                  onTap: () {},
                   choiced: cho,
                 );
               },
@@ -84,6 +106,17 @@ class _HomescreenState extends State<Homescreen> {
           _TitleClass(title: 'Popular Classes'),
 
           SizedBox(height: 10.0),
+          // ListView.builder(
+          //   // physics: NeverScrollableScrollPhysics(),
+          //   itemCount: previews.length,
+          //   // scrollDirection: Axis.horizontal,
+          //   itemBuilder: (context, index) {
+          //     final Preview pre = previews[index];
+          //     return Populartile(
+          //       previewed: pre,
+          //     );
+          //   },
+          // ),
           Column(
             // 'I am still working on it, i want to convert it to CustomScrollview'
             children: <Widget>[

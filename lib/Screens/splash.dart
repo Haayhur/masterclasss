@@ -37,14 +37,13 @@ class _SplashPageState extends State<SplashPage> {
                   size: 50,
                 ),
                 SizedBox(height: 30.0),
-                Text(
-                  'MASTERCLASS',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: kwhite,
-                  ),
-                ),
+                Text('MASTERCLASS', style: kPageTitleStyle
+                    //  TextStyle(
+                    //   fontSize: 30,
+                    //   fontWeight: FontWeight.bold,
+                    //   color: kwhite,
+                    // ),
+                    ),
               ],
             ),
           ),

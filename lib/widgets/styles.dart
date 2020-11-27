@@ -14,9 +14,9 @@ const kSilver = Color(0xFFF6F6F6);
 const kOrange = Color(0xFFFA5805);
 
 var kPageTitleStyle = GoogleFonts.roboto(
-  fontSize: 23.0,
+  fontSize: 25.0,
   fontWeight: FontWeight.w500,
-  color: kBlack,
+  color: kwhite,
   wordSpacing: 2.5,
 );
 var kTitleStyle = GoogleFonts.roboto(
@@ -24,7 +24,12 @@ var kTitleStyle = GoogleFonts.roboto(
   color: kwhite,
   fontWeight: FontWeight.w400,
 );
-var kSubtitleStyle = GoogleFonts.questrial(
-  fontSize: 14.0,
+var kbTitleStyle = GoogleFonts.roboto(
+  fontSize: 20.0,
   color: kBlack,
+  fontWeight: FontWeight.w400,
+);
+var kSubtitleStyle = GoogleFonts.roboto(
+  fontSize: 14.0,
+  color: kwhite,
 );

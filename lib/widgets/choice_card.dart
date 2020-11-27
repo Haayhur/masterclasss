@@ -3,60 +3,64 @@ import 'package:masterclasss/data/choice_model.dart';
 
 class ChoiceCard extends StatelessWidget {
   final Choice choiced;
+  final Function onTap;
 
-  ChoiceCard({this.choiced});
+  ChoiceCard({this.choiced, this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Card(
-          elevation: 13.0,
-          color: Colors.black,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(5.0))),
-          child: Image.asset(
-            choiced.image,
-            fit: BoxFit.cover,
-            height: 250,
-            width: 160,
+    return InkWell(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Card(
+            elevation: 13.0,
+            color: Colors.black,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(5.0))),
+            child: Image.asset(
+              choiced.image,
+              fit: BoxFit.cover,
+              height: 250,
+              width: 160,
+            ),
+            clipBehavior: Clip.antiAlias,
+            margin: EdgeInsets.all(8.0),
           ),
-          clipBehavior: Clip.antiAlias,
-          margin: EdgeInsets.all(8.0),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Container(
-                width: 160,
-                child: Text(
-                  choiced.name,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Container(
-                width: 160,
-                child: Text(
-                  choiced.field,
-                  // textAlign: TextAlign.end,
-                  overflow: TextOverflow.ellipsis,
-                  // overflow: TextOverflow.clip,
-                  maxLines: 2,
-                  style: const TextStyle(
-                    fontSize: 13.0,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Container(
+                  width: 160,
+                  child: Text(
+                    choiced.name,
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
-              ),
-            ],
+                Container(
+                  width: 160,
+                  child: Text(
+                    choiced.field,
+                    // textAlign: TextAlign.end,
+                    overflow: TextOverflow.ellipsis,
+                    // overflow: TextOverflow.clip,
+                    maxLines: 2,
+                    style: const TextStyle(
+                      fontSize: 13.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
+      onTap: onTap,
     );
   }
 }

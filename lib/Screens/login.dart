@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:masterclasss/widgets/custom_buttons.dart';
 import 'package:masterclasss/widgets/custom_text_field.dart';
 import 'package:masterclasss/widgets/styles.dart';
@@ -25,25 +26,24 @@ class _SigninScreenState extends State<SigninScreen> {
               physics: NeverScrollableScrollPhysics(),
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding: const EdgeInsets.only(top: 30.0),
                   child: Icon(
                     Icons.radio_button_checked,
                     size: 50,
                   ),
                 ),
                 SizedBox(
-                  height: size.height * 0.05,
+                  height: size.height * 0.03,
                 ),
                 Container(
                   alignment: Alignment.center,
-                  child: Text(
-                    'MASTERCLASS',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: kwhite,
-                    ),
-                  ),
+                  child: Text('MASTERCLASS', style: kPageTitleStyle
+                      //  TextStyle(
+                      //   fontSize: 30,
+                      //   fontWeight: FontWeight.bold,
+                      //   color: kwhite,
+                      // ),
+                      ),
                 ),
                 SizedBox(
                   height: size.height * 0.1,
@@ -105,6 +105,7 @@ class _SigninScreenState extends State<SigninScreen> {
                                 letterSpacing: 1.3,
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'roboto',
                               ),
                             ),
                           ),
@@ -145,17 +146,19 @@ class _SigninScreenState extends State<SigninScreen> {
                           RichText(
                             text: TextSpan(
                               text: 'Create a new account  ',
-                              style: TextStyle(
-                                color: kwhite,
-                                fontFamily: 'Montserrat',
-                              ),
+                              style: kSubtitleStyle,
+                              // TextStyle(
+                              //   color: kwhite,
+                              //   fontFamily: 'Montserrat',
+                              // ),
                               children: [
                                 TextSpan(
                                   text: 'SignUp',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    color: kwhite,
-                                  ),
+                                  style: kSubtitleStyle,
+                                  // TextStyle(
+                                  //   fontWeight: FontWeight.w600,
+                                  //   color: kwhite,
+                                  // ),
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       // Navigator.pushNamed(context, "/register"
